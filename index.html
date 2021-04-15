@@ -7,23 +7,20 @@
     <!-- Adding Letsee WebAR SDK -->
     <script src="https://developer.letsee.io/api/webar?key=37360f95b7af603c83a2e9292aad8cbedd968231abf34b21ae4b999d182fe19a"></script>
     
-    <!-- Adding configuration .JSON file.
-		1. The .JSON file MUST BE in the same folder hierarchy
-		with your .html and planar image target.
-		2. media="place" is required. -->
-    <style media="place" type="text/css">
-        #container {
-            -letsee-target: uri('letsee-marker.json');
-        }
-    </style>
-</head>
-<body>
-
-    <!-- The id of this div tag MUST be the same with id defined in media="place" style. -->
-    <div id="container">
-        <h2 style="color: white">Hello, world!</h2>
-    </div>
-<script>
+  <style media="place" type="text/css">
+         #container {
+             -letsee-target: uri('toystory.json');
+             width: 140px;
+             height: 200px;
+             border: 4px solid red;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="container">
+         <button>Hello World</button>
+      </div>
+      <script>
          letsee.ready(() => {
                 letsee.start();
             });
